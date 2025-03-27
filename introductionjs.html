@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Introduction Into Javascript</title>
+</head>
+<body>
+
+    <h2>Welcome to Javascript</h2>
+
+    <p id="demo">Hello Everyone</p>
+    <button type="button" onclick="document.getElementById('demo') .innerHTML='hi sir'">Greet</button><hr>
+    
+
+	    <p id="fan"></p>
+<script type="text/javascript">
+    var x,y,z;
+				x=4;
+				y=8;
+				z=x+y;
+				document.getElementById("fan").innerHTML="Answer is " +z;
+</script><hr>
+<button onclick="demoalert();">Alert Them</button><hr>
+<script type="text/javascript">
+	function demoalert(argument){
+		alert('Connection lost');
+	}
+</script>
+
+<p id="pro"></p>
+<button onclick="demoprompt();">Prompt</button><hr>
+<script type="text/javascript">
+function demoprompt(argument){
+	var txt;
+	var pro= prompt("what's up my gee", "demo")
+	if(pro==null || pro==""){
+		txt ="field required";
+	}else{
+		txt ="okay you are correct sir/ma";
+	}
+	document.getElementById("pro") .innerHTML=txt;
+	document.getElementById("pro") .style.color="red"
+}
+</script>
+
+<p id="come"></p>
+<button onclick="democonfirm();">Confirm</button><hr>
+<script type="text/javascript">
+
+	function democonfirm (argument){
+		var txt2;
+		if (confirm("Are you sure you want to delete?")){
+			txt2="You have successfully deleted the action";
+		}else{
+			txt2="you have cancel the action";
+		}
+		document.getElementById("come").innerHTML=txt2;
+		document.getElementById("come").style.color="red";
+	}
+
+</script>
+
+
+<h2 id="number"></h2><hr>
+<script type="text/javascript">
+var num2 =Math.floor(Math.random()*1000)
+document.getElementById("number").innerHTML= num2;
+</script>
+
+
+<div>
+<p id="status"></p>
+<form action="post" onsubmit="return formvalidation()">
+	<input type="text" name="" id="name3">
+	<button type="submit">Submit</button>
+</form>
+</div><hr>
+<script type="text/javascript">
+	function formvalidation(argument){
+		var name3=document.getElementById('name3').value;
+		if(name3=="" || name3 == null){
+document.getElementById('status').innerHTML="all field required";
+document.getElementById('status').style="red";
+return false
+		}else if(isNan(name3)){
+			document.getElementById('status').innerHTML="Enter Valid Number";
+			document.getElementById('status').style.color="yellow";
+		}else{
+			document.getElementById('status').innerHTML="&#10003";
+			document.getElementById('status').style.color="green";
+		}
+	};
+</script>
+<h1 id="header" onmouseover="this.style.color='yellow'">Hello, World!</h1>
+<script type="text/javascript">
+let header = document.getElementById('header').innerHTML;
+document.getElementById('header').style.color = "green";
+document.getElementById('header').style.fontSize= "40px";
+document.getElementById('header').style.fontFamily= "Arial";
+document.getElementById('header').style.fontWeight= "1000";
+</script>
+
+
+</body>
+</html>
